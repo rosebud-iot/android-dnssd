@@ -5,11 +5,14 @@ repositories {
 }
 
 android {
-    compileSdkVersion 30
+    namespace 'com.sweepr.dnssd'
+    testNamespace 'com.sweepr.dnssd.tests'
+
+    compileSdk 34
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 30
+        minSdkVersion 21
+        targetSdkVersion 34
     }
 
     buildTypes {
@@ -24,8 +27,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     externalNativeBuild {
@@ -34,7 +37,7 @@ android {
         }
     }
 
-    ndkVersion "23.1.7779620"
+    ndkVersion '28.0.12916984'
 }
 
 dependencies {
@@ -53,7 +56,7 @@ dependencies {
 
 ext {
     // Provide your own coordinates here
-    PUBLISH_GROUP_ID = 'com.github.andriydruk'
+    PUBLISH_GROUP_ID = 'com.sweepr'
     PUBLISH_ARTIFACT_ID = 'dnssd'
 }
 

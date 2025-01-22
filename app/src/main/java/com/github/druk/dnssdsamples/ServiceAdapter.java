@@ -17,10 +17,8 @@ package com.github.druk.dnssdsamples;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Build;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -39,7 +37,7 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
 
     public ServiceAdapter(Context context) {
         TypedValue mTypedValue = new TypedValue();
-        context.getTheme().resolveAttribute(R.attr.selectableItemBackground, mTypedValue, true);
+        context.getTheme().resolveAttribute(android.R.attr.selectableItemBackground, mTypedValue, true);
     }
 
     @NonNull
@@ -49,7 +47,6 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
     }
 
     @SuppressLint("SetTextI18n")
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         BonjourService bs = getItem(position);
