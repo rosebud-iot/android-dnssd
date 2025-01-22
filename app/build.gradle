@@ -20,7 +20,7 @@ android {
         }
     }
 
-    lintOptions {
+    lint {
         abortOnError false
     }
 
@@ -29,7 +29,7 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 
-    ndkVersion "23.1.7779620"
+    ndkVersion '28.0.12916984'
 }
 
 dependencies {
