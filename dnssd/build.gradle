@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 android {
-    namespace 'com.sweepr.dnssd'
-    testNamespace 'com.sweepr.dnssd.tests'
+    namespace 'com.github.druk.dnssd'
+    testNamespace 'com.github.druk.dnssd.tests'
 
     compileSdk 34
 
