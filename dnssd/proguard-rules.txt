@@ -15,3 +15,30 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# Default library project, copied from: ~/Library/Android/sdk/tools/proguard/examples/library.pro
+-keepparameternames
+-keeppackagenames
+-renamesourcefileattribute SourceFile
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,
+                SourceFile,LineNumberTable,EnclosingMethod
+
+# Preserve all annotations.
+-keepattributes *Annotation*
+
+# Preserve all public classes, and their public and protected fields and methods.
+-keep public class * {
+    public protected *;
+}
+
+-keep public interface * {
+}
+
+# Preserve all .class method names.
+-keepclassmembernames class * {
+    java.lang.Class class$(java.lang.String);
+    java.lang.Class class$(java.lang.String, boolean);
+}
+

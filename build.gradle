@@ -22,7 +22,7 @@ allprojects {
 }
 
 //Switch off predex on CI
-ext.preDexLibs = !project.hasProperty('disablePreDex')
+//ext.preDexLibs = !project.hasProperty('disablePreDex')
 
 subprojects {
     /*
