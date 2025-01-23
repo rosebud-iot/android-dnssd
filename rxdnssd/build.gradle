@@ -51,7 +51,7 @@ dependencies {
 }
 
 ext {
-    PUBLISH_GROUP_ID = 'com.sweepr.dnssd'
+    PUBLISH_GROUP_ID = 'com.sweepr'
     PUBLISH_ARTIFACT_ID = 'rxdnssd'
 }
 
