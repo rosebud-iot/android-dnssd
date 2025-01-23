@@ -4,11 +4,11 @@ android {
     namespace 'com.github.druk.dnssd'
     testNamespace 'com.github.druk.dnssd.tests'
 
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 34
+        targetSdkVersion 35
     }
 
     buildTypes {
