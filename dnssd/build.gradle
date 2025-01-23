@@ -1,9 +1,5 @@
 apply plugin: 'com.android.library'
 
-repositories {
-    mavenCentral()
-}
-
 android {
     namespace 'com.sweepr.dnssd'
     testNamespace 'com.sweepr.dnssd.tests'
@@ -22,6 +18,15 @@ android {
             enableUnitTestCoverage false
             enableAndroidTestCoverage false
         }
+        debug {
+            minifyEnabled false
+            enableUnitTestCoverage true
+            enableAndroidTestCoverage true
+        }
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     testOptions {

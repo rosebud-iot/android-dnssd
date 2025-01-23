@@ -12,6 +12,7 @@
 bin/
 gen/
 obj/
+.DS_Store
 
 # Gradle files
 .gradle/
