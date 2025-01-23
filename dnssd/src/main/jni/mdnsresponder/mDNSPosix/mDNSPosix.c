@@ -505,7 +505,7 @@ mDNSexport int ParseDNSServers(mDNS *m, const char *filePath)
 	{
 	char line[256];
 	char nameserver[16];
-	char keyword[10];
+	char keyword[12];
 	int  numOfServers = 0;
 	FILE *fp = fopen(filePath, "r");
 	if (fp == NULL) return -1;
@@ -514,7 +514,7 @@ mDNSexport int ParseDNSServers(mDNS *m, const char *filePath)
 		struct in_addr ina;
 		line[255]='\0';		// just to be safe
 		if (sscanf(line,"%10s %15s", keyword, nameserver) != 2) continue;	// it will skip whitespaces
-		if (strncasecmp(keyword,"nameserver",10)) continue;
+		if (strncasecmp(keyword,"nameserver",10) != 0) continue;
 		if (inet_aton(nameserver, (struct in_addr *)&ina) != 0)
 			{
 			mDNSAddr DNSAddr;
